@@ -1,5 +1,9 @@
 import requests
+from dotenv import load_dotenv
+import os
 
+def configure():
+    load_dotenv()
 
 def getnews(**kwargs):
     """
@@ -10,7 +14,7 @@ def getnews(**kwargs):
     url = headlines
     params = {
         "language": "en",
-        "apiKey": "df1128eacb9b41939638e53ca9478925",
+        "apiKey": os.getenv("api")
     }
     if "q" in params:   url = everything
     for key, value in kwargs.items():   params[key] = value 
