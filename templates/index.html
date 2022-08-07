@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Newsify| Know the world{% endblock %}
+
+{% block content %}
+    <form class="search" action="/" method="POST">
+        <input type="text" placeholder="Search..." name="search">
+        <button type="submit">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.50834 11.0167C6.89566 11.0167 8.16021 10.4973 9.13047 9.64825L10.1826 11.8516C10.1826 11.8516 10.399 12.0279 10.6964 12.3206C11.0009 12.6062 11.4015 12.9926 11.7855 13.3963L12.8541 14.4917L13.3294 15L14.9984 13.331L14.4901 12.8557L13.3947 11.7871C13.0262 11.434 12.6675 11.0709 12.319 10.698C12.0263 10.4005 11.85 10.1841 11.85 10.1841L9.64668 9.13204C10.5291 8.13112 11.0162 6.84272 11.0167 5.50834C11.0167 2.47167 8.54501 0 5.50834 0C2.47167 0 0 2.47167 0 5.50834C0 8.54501 2.47167 11.0167 5.50834 11.0167Z" fill="#2E2A4C"/>
+            </svg>
+        </button>
+    </form>
+    <h1 class="title">{{title}}</h1>
+    <form action="/" method="POST" class="container">
+        {% if "error" not in data %}
+            {% for n in range(len(data)) %}
+                {% set news=data[n] %}
+                <button class="card" name="card" value={{n}}>
+                    <h4>{{news['date']}}</h4>
+                    <h2>{{news['title'][:105]}}</h2>
+                    <img src={{news["image"]}} onerror="this.onerror=null; this.src='https://cdn.sanity.io/images/0vv8moc6/ophtalmology/d198c3b708a35d9adcfa0435ee12fe454db49662-640x400.png/no-image-available-icon-6.jpg?w=1500&fit=max&auto=format'" alt="img">
+                </button>
+            {% endfor %}
+        {% else %}
+            <h1 class="notfound">No <br> news found</h1>
+        {% endif %}
+    </form>
+{% endblock %}

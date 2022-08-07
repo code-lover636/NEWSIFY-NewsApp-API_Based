@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Newsify| {{title}} {% endblock %}
+
+{% block content %}
+<img class="carousel" src={{news["image"]}} onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'">
+
+<div class="wrapper">
+    <h1 class="heading">{{news["title"]}}</h1>
+    <div class="srcdt">
+        <h4 class="date">{{news["date"]}}</h4>
+        <a href={{news["url"]}} class="source" target="_blank">Source: {{news["source"]}} </a>
+    </div>
+
+    <p class="content">{{news["description"]}} <br><br> {{news["content"]}} <br><br> <span>To read more click on source.</span></p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Bahianita&family=Jost:wght@400;700;800&family=Macondo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #272343;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hero {
+  background: #272343;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero header {
+  background: #2E2A4D;
+  height: 75px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 2em;
+  padding-right: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 15;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero header svg {
+  cursor: pointer;
+}
+
+.hero header .logo {
+  color: #E3F6F5;
+  font-size: 45px;
+  font-family: 'bahianita';
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero .open-nav {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.hero nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 52vw;
+  height: 100vh;
+  background: #2E2A4C;
+  z-index: 10;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.hero nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 13vh;
+  height: 80vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.hero nav ul li {
+  width: 100%;
+}
+
+.hero nav ul li button {
+  background: transparent;
+  color: #E3F6F5;
+  font-size: 20px;
+  font-family: 'Jost';
+  font-weight: 400;
+  padding: 1em;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+.hero nav ul li button:hover {
+  background: rgba(114, 109, 157, 0.29);
+}
+
+.hero nav ul li button svg {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.hero .search {
+  padding-top: 9em;
+  padding-bottom: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+
+.hero .search input {
+  width: 230px;
+  height: 25px;
+  padding-left: 1em;
+  outline: none;
+  background: #FFFFFF;
+  font-family: 'Jost';
+  font-weight: 800;
+  border: 2px solid #BAE8E8;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.hero .search button {
+  margin-left: 1em;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #BAE8E8;
+  background: #BAE8E8;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .title {
+  color: #BAE8E8;
+  font-size: 40px;
+  font-family: 'Jost';
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  top: 200px;
+}
+
+.hero .container {
+  width: 100vw;
+  background-color: transparent;
+  position: absolute;
+  top: 18em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 5em;
+}
+
+.hero .container .notfound {
+  color: rgba(114, 109, 157, 0.29);
+  font-size: 50px;
+  padding-top: 2em;
+  font-family: 'Macondo';
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero .container .card {
+  padding: 1em 1em;
+  margin-top: 3em;
+  height: 400px;
+  width: 260px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(114, 109, 157, 0.29);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hero .container .card h4 {
+  color: #B59E9E;
+  font-family: 'Jost';
+  font-size: 15px;
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+}
+
+.hero .container .card h2 {
+  color: #E3F6F5;
+  font-size: 20px;
+  font-family: 'Jost';
+  font-weight: 700;
+  text-align: center;
+}
+
+.hero .container .card img {
+  width: 230px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero .container .card:hover {
+  -webkit-box-shadow: 0px 4px 4px #E3F6F5;
+          box-shadow: 0px 4px 4px #E3F6F5;
+}
+
+.hero .carousel {
+  width: 100vw;
+  height: 200px;
+  position: absolute;
+  top: 77px;
+}
+
+.hero .wrapper {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+  top: 280px;
+}
+
+.hero .wrapper .heading {
+  font-family: 'Jost';
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 130%;
+  letter-spacing: 0.11em;
+  padding: 2em 1em;
+  text-align: justify;
+  color: #FFFFFF;
+}
+
+.hero .wrapper .srcdt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  padding-right: 1em;
+}
+
+.hero .wrapper .srcdt .date {
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 15px;
+  width: auto;
+  letter-spacing: 0.11em;
+  color: #B59E9E;
+  text-align: right;
+}
+
+.hero .wrapper .srcdt .source {
+  font-family: 'Jost';
+  width: auto;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.11em;
+  color: #FF0000;
+  text-decoration: none;
+  text-align: right;
+}
+
+.hero .wrapper .content {
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.11em;
+  color: #E3F6F5;
+  text-align: justify;
+  padding: 2em 2em;
+  padding-bottom: 10em;
+}
+
+.hero .wrapper .content span {
+  color: #9b8585;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 650px) {
+  .hero .container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero .container {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero .carousel {
+    width: 100%;
+    height: 300px;
+    padding-left: 200px;
+  }
+  .hero .wrapper {
+    width: 100%;
+    padding-left: 200px;
+    top: 400px;
+  }
+  .hero .wrapper .heading {
+    padding: 2em 3em;
+  }
+  .hero .wrapper .srcdt {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-right: 6em;
+  }
+  .hero .wrapper .srcdt .source {
+    margin-left: 1em;
+  }
+  .hero .wrapper .content {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  .hero header {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  .hero header .menu {
+    display: none;
+  }
+  .hero nav {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 200px;
+  }
+  .hero nav ul li button {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .hero .search {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: auto;
+    top: 150px;
+    right: 4em;
+  }
+  .hero .search input {
+    font-weight: 400;
+    font-size: 1rem;
+    width: 450px;
+    height: 28px;
+  }
+  .hero .search button {
+    width: 28px;
+    height: 28px;
+  }
+  .hero .title {
+    top: 130px;
+    left: 275px;
+    font-size: 40px;
+  }
+  .hero .container {
+    top: 14em;
+    padding-left: 250px;
+    padding-right: 50px;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+  .hero .container .notfound {
+    margin-left: 100%;
+    width: 100%;
+  }
+  .hero .container .card {
+    height: 285px;
+    width: 205px;
+  }
+  .hero .container .card h4 {
+    font-size: 10px;
+  }
+  .hero .container .card h2 {
+    font-size: 15px;
+  }
+  .hero .container .card img {
+    width: 180px;
+    height: 105px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .hero .container {
+    -ms-grid-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
