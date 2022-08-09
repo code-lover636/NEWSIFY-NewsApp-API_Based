@@ -11,6 +11,14 @@ NEWSIFY is a news browsing app built with news API
 3. Figma for web designing
 4. News API
 
+## Install the following modules
+```
+pip install requests
+```
+```
+pip install flask
+```
+
 ## Output Images
 ![image](https://user-images.githubusercontent.com/77882744/183293668-a686b024-38da-4cff-8535-d43af723e171.png)
 
