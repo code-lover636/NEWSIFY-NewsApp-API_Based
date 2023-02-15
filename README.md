@@ -7,7 +7,7 @@ NEWSIFY is a news browsing app built with news API
 
 ## Tools used
 1. Flask for backend
-2. HTML, SCSS, Javascript for fronted
+2. HTML, SCSS, Javascript for frontend
 3. Figma for web designing
 4. News API
 
