@@ -9,7 +9,7 @@ def homePage():
     global data
     try:
         type(data)
-    except Exception:
+    except NameError:
         data = getnews(category="general")
     title = "General"
     if request.method == "POST":
