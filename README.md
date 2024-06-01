@@ -1,7 +1,7 @@
 # NEWSIFY-based-on-news-API
 
 ## Description
-See hosted website https://programmer636.pythonanywhere.com/
+See hosted [website](https://newsify-uixw.onrender.com/)
 
 NEWSIFY is a news browsing app built with news API
 
