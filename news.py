@@ -18,7 +18,7 @@ def getnews(**kwargs):
     }
     if "q" in params:   url = everything
     for key, value in kwargs.items():   params[key] = value 
-    print(url,params)
+
     results = requests.get(url, params=params)
     response = results.json()
     data = []

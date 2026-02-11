@@ -19,7 +19,7 @@
                 <button class="card" name="card" value={{n}}>
                     <h4>{{news['date']}}</h4>
                     <h2>{{news['title'][:105]}}</h2>
-                    <img src={{news["image"]}} onerror="this.onerror=null; this.src='https://cdn.sanity.io/images/0vv8moc6/ophtalmology/d198c3b708a35d9adcfa0435ee12fe454db49662-640x400.png/no-image-available-icon-6.jpg?w=1500&fit=max&auto=format'" alt="img">
+                    <img src={{ news[ "image" ] }} onerror="this.onerror=null; this.src='https://cdn.sanity.io/images/0vv8moc6/ophtalmology/d198c3b708a35d9adcfa0435ee12fe454db49662-640x400.png/no-image-available-icon-6.jpg?w=1500&fit=max&auto=format'" alt="img">
                 </button>
             {% endfor %}
         {% else %}

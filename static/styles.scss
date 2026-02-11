@@ -58,10 +58,12 @@ body{
             text-decoration: none;
         }
     }
+    
     // Menu opening and closing
     .open-nav{
         transform: translateX(0%);
     }
+
     nav{
         position: fixed;
         left: 0;
