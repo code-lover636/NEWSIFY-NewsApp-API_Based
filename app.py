@@ -30,6 +30,9 @@ def homePage():
             
     return render_template("index.html",data=data,title=title,len=len, range=range)
 
-    
+@app.route("/health")
+def health():
+    return "Status OK", 200
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

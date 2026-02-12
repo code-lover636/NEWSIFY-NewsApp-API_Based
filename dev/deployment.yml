@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: newsify-depl
+  namespace: newsify-ns
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: newsify
+
+  template:
+    metadata:
+      labels:
+        app: newsify
+
+    spec:
+      containers:
+      - name: newsify-container
+        image: aravindashokan/newsify:latest
+
+        ports:
+        - containerPort: 5000
+
+        env:
+        - name: api
+          valueFrom:
+            secretKeyRef:
+              name: apikey
+              key: api
+        
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 2
+          failureThreshold: 3
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 2
+          failureThreshold: 3
+      
+      imagePullSecrets:
+        - name: registrykey
