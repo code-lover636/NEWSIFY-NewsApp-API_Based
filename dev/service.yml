@@ -3,7 +3,7 @@ kind: Service
 
 metadata:
   name: newsify-service
-  namespace: newsify-ns
+  namespace: newsify-ns-3
 
 spec:
   type: NodePort
@@ -14,4 +14,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 5000
-      nodePort: 30007
+      nodePort: 30009

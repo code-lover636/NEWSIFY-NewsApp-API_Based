@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/code-lover636/NEWSIFY-NewsApp-API_Based.git
     targetRevision: HEAD
-    path: .
+    path: dev
   destination:
     server: https://kubernetes.default.svc
     namespace: newsify-ns-3

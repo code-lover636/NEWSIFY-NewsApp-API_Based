@@ -3,7 +3,7 @@ kind: Deployment
 
 metadata:
   name: newsify-depl
-  namespace: newsify-ns
+  namespace: newsify-ns-3
 
 spec:
   replicas: 3
