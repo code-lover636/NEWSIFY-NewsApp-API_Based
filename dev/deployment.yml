@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: newsify-container
-        image: aravindashokan/newsify:1.0.13
+        image: aravindashokan/newsify:1.0.14
 
         ports:
         - containerPort: 5000
